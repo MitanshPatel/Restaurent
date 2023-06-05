@@ -1,0 +1,59 @@
+body{
+    position: relative;
+    font-family: 'Dosis', sans-serif !important;
+    padding-bottom: 150px;      /*FOR FOOTER TO STAY AT LAST*/
+}
+
+/* Navbar */
+.navbar {
+    background-color: #08AEEA;
+    background-image: linear-gradient(61deg, #08AEEA 0%, #2AF598 100%);   
+}
+
+.navbar-brand{
+    font-family: 'Sedgwick Ave', cursive;
+    letter-spacing: 3px;
+}
+
+/* Card */
+.card{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+select{
+    background-color: #9bdcf3;
+    border-radius: 5px;  
+    color: #000000;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    margin: 0px;
+}
+
+
+/* Footer */
+.foot{
+    position: absolute;
+    bottom: 0;
+    background-color: #08AEEA;
+    background-image: linear-gradient(61deg, #08AEEA 0%, #2AF598 100%);   
+    width: 100%;
+    padding-top: 30px;
+    color: #fff;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+    margin: 0px 20px;
+}
+
+.copyright{
+    font-size: 20px;
+    font-family: 'Sedgwick Ave', cursive;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
