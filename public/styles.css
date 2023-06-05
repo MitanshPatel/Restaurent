@@ -1,7 +1,7 @@
 body{
     position: relative;
     font-family: 'Dosis', sans-serif !important;
-    padding-bottom: 150px;      /*FOR FOOTER TO STAY AT LAST*/
+    padding-bottom: 150px;      /*FOR FOOTER TO STAY AT THE LAST*/
 }
 
 /* Navbar */
