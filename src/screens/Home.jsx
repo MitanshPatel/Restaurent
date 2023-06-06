@@ -8,7 +8,7 @@ function Home() {
   return (
     <div>
       <div><Navbar /></div>
-      {/* <div><Carousel /></div> */}
+      <div><Carousel /></div>
       <div><Card /></div>
       <div><Card /></div>
       <div><Card /></div>
