@@ -2,8 +2,14 @@ const express = require("express");
 const mongoDB = require("./db");
 const app = express();
 mongoDB();
-app.get("/", (req,res) =>{
-    res.send("hi")
+
+app.use((req,res,next)=>{           //for submitting sign up page, required
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000")
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
 })
 
 app.use(express.json())

@@ -1,0 +1,52 @@
+.title{
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: fit-content; 
+    text-align: center;
+    margin-top: 150px;
+    z-index: 2;
+    color: #fff;
+}
+
+.titleHead{
+    font-family: 'Satisfy';
+    font-size: 150px;
+}
+
+.titleSub{
+    margin-top: 4px;
+    text-align : center; 
+    font-size : 30px; 
+    color : gold;
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1150px){
+    .title{
+        margin-top: 70px;
+    }
+
+    .titleHead{
+        font-size: 90px;
+    }
+
+    .titleSub{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-device-width : 749px){
+    .title{
+        margin-top: 10px;
+    }
+
+    .titleHead{
+        display: none;
+    }
+
+    .titleSub{
+        display: none;
+    }
+}

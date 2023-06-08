@@ -1,10 +1,11 @@
 import React from 'react'
+import titlecss from '../astyles/title.module.css'
 
 function Title() {
   return (
-    <div>
-      <h1 className='titleHead' >La Cuisine Magique</h1>
-      <p className="titleSub">Exquisite French cuisine in an elegant ambiance.</p>
+    <div className={titlecss.title}>
+      <h1 className={titlecss.titleHead} >La Cuisine Magique</h1>
+      <p className={titlecss.titleSub}>Exquisite French cuisine in an elegant ambiance.</p>
     </div>
   )
 }

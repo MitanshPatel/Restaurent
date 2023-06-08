@@ -11,7 +11,7 @@ function Home() {
   return (
     <div>
       <div><Navbar /></div>
-      <div className='title'><Title /></div>
+      <div><Title /></div>
       <div><Carousel /></div>
       <div className={cardcss.cardo}>
         <Card />
@@ -19,9 +19,9 @@ function Home() {
         <Card />
         <Card />
       </div>
-      <div>
 
-      </div>
+
+      <div className='helpfooter'></div>
       <div><Footer /></div>
     </div>
   )
