@@ -1,13 +1,14 @@
 import React,{useState} from 'react'
 import css from '../astyles/login.module.css'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 function Login() {
+  const navigate = useNavigate();
   const [details, setDetails] = useState({email:"", password:""})
 
   const handleSubmit = async(event) =>{
     event.preventDefault();         //will keep the value entered in the forms event after submitting
-    const res = await fetch("http://localhost:5000/api/createuser",{
+    const res = await fetch("http://localhost:5000/api/login",{
       method:"POST",
       headers:{
         'Content-Type': 'application/json'
@@ -20,6 +21,10 @@ function Login() {
 
     if(!json.success){
       alert("Enter valid details")
+    }
+    else if(json.success){
+      localStorage.setItem("authToken",json.authToken);
+      navigate("/");
     }
   } 
 

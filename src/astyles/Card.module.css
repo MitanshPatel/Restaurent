@@ -1,9 +1,21 @@
+.head{
+    color: gold;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: 'Satisfy';
+    font-weight: bolder;
+    font-size: 900px;
+    margin-top: 20px;
+}
+
 .carddisplay{
     display: inline-block;
+    margin: 20px 0px;
 }
 
 .cardi{
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+    min-height: 370px;
 }
 
 .carddisplay:hover{
