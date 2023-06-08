@@ -1,9 +1,10 @@
 import React from 'react'
+import Cardcss from '../astyles/Card.module.css'
 
 function Card() {
   return (
-    <div className='carddisplay'>
-      <div className="card mt-3" style={{ "width": "18rem", "maxHeight": "360px" }}>    {/* mt-3 is margin top 3px */}
+    <div className={Cardcss.carddisplay}>
+      <div className={`card mt-3 ${Cardcss.cardi}`}  style={{ "width": "18rem", "maxHeight": "360px" }}>    {/* mt-3 is margin top 3px */}
         <img src="https://cdn.tasteatlas.com//images/dishes/d8cf5af177274c3d9760ed59e92d3ec0.jpg?w=905&h=510" className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">Lasagne alla Bolognese</h5>
