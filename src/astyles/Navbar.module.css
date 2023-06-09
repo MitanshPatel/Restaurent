@@ -10,9 +10,67 @@
     margin-left: 50px;
 }
 
+.sign, .log, .cart, .logout{
+    margin-right: 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+    height: 39px;
+    width: 85px;
+    text-align: center;
+    font-size: large;
+    font-weight: 900;
+}
+
+.sign:hover, .log:hover{
+    background-color: rgba(255,255,255,0.5);
+    border: solid;
+    border-width: 0.2px;
+    border-color: white;
+}
+
+.cart:hover{
+    background-color: rgba(211, 180, 0, 0.8);
+    border: solid;
+    border-width: 0.2px;
+    border-color: wheat;
+}
+
+.logout:hover{
+    background-color: rgba(255, 0, 0, 0.9);
+    border: solid;
+    border-width: 0.2px;
+    border-color: white;
+}
 
 @media only screen and (max-device-width : 749px){
     .brand{
         margin-left: 10px;
+    }
+    .home, .log, .sign{
+        margin-left: 10px;
+    }
+    .logbtns{
+        flex-direction: column;
+    }
+
+    .sign{
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-device-width : 991px) and (min-device-width : 750px){
+    .home, .log, .sign{
+        margin-left: 50px;
+    }
+
+    .sign{
+        margin-top: 10px;
+    }
+    
+    .logbtns{
+        flex-direction: column;
     }
 }

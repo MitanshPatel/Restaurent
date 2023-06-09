@@ -8,7 +8,7 @@ import '../index.css'
 import cardcss from '../astyles/Card.module.css'
 
 function Home() {
-  const [search, setSearch] = useState([])
+  const [search, setSearch] = useState('')
   const [category, setCategory] = useState([])   //array is sent from backend (array: [], object: {})
   const [item, setItem] = useState([])
 
@@ -29,6 +29,9 @@ function Home() {
     loadData()
   }, [])
 
+  const searchIt = (e)=>{
+    setSearch(e.target.value);
+  }
 
   return (
     <div>
@@ -36,7 +39,7 @@ function Home() {
       <div><Title /></div>
       <div><Carousel /></div>
       <form className="d-flex search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <input value={search} onChange={searchIt} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form>
       <div className='container'>
@@ -47,7 +50,7 @@ function Home() {
                 <div key={data._id} className={cardcss.head}><h1>{data.CategoryName}</h1></div>
                 <hr />
                 {
-                  item !== [] ? item.filter((item)=> item.CategoryName===data.CategoryName)
+                  item !== [] ? item.filter((item)=> (item.CategoryName===data.CategoryName) && (item.name.toLowerCase().includes(search.toLocaleLowerCase()))) 
                   .map(filterItems=>{
                     return(
                       <div key={filterItems._id} className= {cardcss.cardo}>

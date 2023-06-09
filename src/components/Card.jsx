@@ -28,6 +28,7 @@ function Card(props) {
               })}
             </select>
             <span><p className='d-inline fs-5'>Total Price</p></span>
+            <button className={Cardcss.addcart}>Add to Cart</button>
           </div>
         </div>
       </div>
