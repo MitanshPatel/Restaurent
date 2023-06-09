@@ -10,6 +10,7 @@ import {
 import Login from './screens/Login';
 import SignUp from './screens/SignUp'
 import { CartProvider } from './components/contextReducer';
+import Cart from './screens/Cart';
 
 function App() {
   return (

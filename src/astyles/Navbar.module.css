@@ -37,11 +37,22 @@
     padding: 5px;
     border-radius: 5px;
     height: 39px;
-    width: 85px;
+    width: 92px;
     text-align: center;
     font-size: large;
     font-weight: 900;
     z-index: 3;
+}
+
+.cart{
+    border: none;
+}
+
+h6{
+    display: inline;
+    position: relative;
+    margin-left: 2px;
+    bottom: 10px;
 }
 
 .sign:hover, .log:hover{
@@ -55,7 +66,6 @@
     background-color: rgba(211, 180, 0, 0.8);
     border: solid;
     border-width: 0.2px;
-    
 }
 
 .logout:hover{
@@ -63,6 +73,10 @@
     border: solid;
     border-width: 0.2px;
     
+}
+
+.logbtns{
+    display: flex !important;
 }
 
 @media only screen and (max-device-width : 749px){
@@ -84,11 +98,21 @@
     .wavi{
         top: 55px;
     }
+
+    .cart, .logout{
+        margin-left: 5px;
+        text-align: left;
+    }
 }
 
 @media only screen and (max-device-width : 991px) and (min-device-width : 750px){
     .home, .log, .sign{
         margin-left: 50px;
+    }
+
+    .cart, .logout{
+        margin-left: 42px;
+        text-align: left;
     }
 
     .sign{

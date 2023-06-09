@@ -55,15 +55,12 @@ function Home() {
                     return(
                       <div key={filterItems._id} className= {cardcss.cardo}>
                         <Card 
-                          foodName = {filterItems.name}
+                          foodItem={filterItems}
                           options = {filterItems.options[0]}
-                          imgsrc = {filterItems.img}
-                          desc = {filterItems.description}
                         />
                       </div>
                     )
                   })
-                    
                    : ""
                 }
               </div>

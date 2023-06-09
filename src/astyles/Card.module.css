@@ -16,7 +16,7 @@
 
 .cardi{
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
-    min-height: 400px;
+    min-height: 410px;
 }
 
 .carddisplay:hover{
@@ -57,4 +57,17 @@ select{
 .srchbtn:hover{
     background-color: #ffd700;
     color: black;
+}
+
+.price{
+    margin: 0px 9px;
+    font-size: 25px !important;
+}
+
+.titl{
+    color: #eac701;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
 }
