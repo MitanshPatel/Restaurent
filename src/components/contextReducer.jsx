@@ -11,7 +11,14 @@ const reducer = (state, action) => {
             let newArr = [...state]
             newArr.splice(action.index, 1)
             return newArr
-
+        case "UPDATE":
+            let arr = [...state]
+            arr.find((food,index)=>{
+                if(food.id === action.id){
+                    arr[index]={...food, qty: parseInt(action.qty) + food.qty, price: action.price + food.price}
+                }
+            })
+            return arr
         default:
             console.log("Error in reducer");
     }

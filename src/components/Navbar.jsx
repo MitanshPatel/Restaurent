@@ -7,6 +7,7 @@ import { useCart, useDispatchCart } from '../components/contextReducer';
 
 function Navbar() {
   let data = useCart();                  //data which is sent to other components
+  var len = data.length;
   let dispatch = useDispatchCart();      //used to dispatch data to other components thru contextRouter
 
 
@@ -46,7 +47,7 @@ function Navbar() {
               :
               <div className={`d-flex ${navcss.logbtns}`}>
                 <button onClick={() => setCartView(true)} className={navcss.cart} to='/cart'>My Cart<h6>
-                  <span className="badge bg-dark">{data.length}</span></h6></button>
+                  <span className="badge bg-dark">{len}</span></h6></button>
                 {cartView ? <Model onClose={() => setCartView(false)}>
                   <Cart />
                 </Model> : null}

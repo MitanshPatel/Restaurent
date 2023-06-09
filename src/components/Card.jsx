@@ -15,32 +15,30 @@ function Card(props) {
   const handleAddToCart = async () => {
     let food = []          //will store all duplicated items that are added to cart
     for (const item of data) {
-      if (item.id === props.foodItem._id) {               
+      if (item.id === props.foodItem._id) {
         food = item;  //will store all duplicated items that are added to cart
-
         break;
       }
     }
-    if (food !== []) {
-      if (food.size === size) {
+    if (food !== []) {    //if there is a duplicated food added to cart
+      if (food.size === size) {         //half is different from full order
         await dispatch({ type: "UPDATE", id: props.foodItem._id, price: finalPrice, qty: qty })
         return
       }
       else if (food.size !== size) {
         await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, price: finalPrice, qty: qty, size: size })
-        console.log("Size different so simply ADD one more to the list")
         return
       }
       return
     }
 
     await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, price: finalPrice, qty: qty, size: size })
-    console.log(data)
+    return
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     setSize(priceRef.current.value)
-  },[])
+  }, [])
 
   let finalPrice = qty * parseInt(options[size]);
 
@@ -62,7 +60,7 @@ function Card(props) {
             <select className='m-2 h-100' ref={priceRef} onChange={(e) => setSize(e.target.value)} >
               {priceOptions.map((opt) => {
                 return (
-                  <option  key={opt} value={opt} >{opt}</option>
+                  <option key={opt} value={opt} >{opt}</option>
                 )
               })}
             </select>
