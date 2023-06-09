@@ -1,19 +1,38 @@
 /* Navbar */
+.wavi{
+    position: absolute;
+    z-index: 2;
+    top: 38px;
+}
+
 .navbari {
-    background-color: #08AEEA;
-    background-image: linear-gradient(61deg, #08AEEA 0%, #2AF598 100%);
+    background-color: #ffd700 !important;
+    z-index: 200;
 }
 
 .brand{
     font-family: 'Sedgwick Ave', cursive;
-    letter-spacing: 3px;
-    margin-left: 50px;
+    letter-spacing: 2px;
+    margin: 0px auto !important;
+    text-align: center !important;
+    z-index: 3;
+    color: black;
+    font-weight: bolder;
+}
+
+.brand:hover{
+    color: black;
+}
+
+.home{
+    color: black !important;
+    font-weight: bolder;
 }
 
 .sign, .log, .cart, .logout{
     margin-right: 15px;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     background-color: transparent;
     padding: 5px;
     border-radius: 5px;
@@ -22,27 +41,28 @@
     text-align: center;
     font-size: large;
     font-weight: 900;
+    z-index: 3;
 }
 
 .sign:hover, .log:hover{
     background-color: rgba(255,255,255,0.5);
     border: solid;
     border-width: 0.2px;
-    border-color: white;
+    
 }
 
 .cart:hover{
     background-color: rgba(211, 180, 0, 0.8);
     border: solid;
     border-width: 0.2px;
-    border-color: wheat;
+    
 }
 
 .logout:hover{
     background-color: rgba(255, 0, 0, 0.9);
     border: solid;
     border-width: 0.2px;
-    border-color: white;
+    
 }
 
 @media only screen and (max-device-width : 749px){
@@ -54,10 +74,15 @@
     }
     .logbtns{
         flex-direction: column;
+        z-index: 3;
     }
 
     .sign{
         margin-top: 10px;
+    }
+
+    .wavi{
+        top: 55px;
     }
 }
 
@@ -72,5 +97,12 @@
     
     .logbtns{
         flex-direction: column;
+        z-index: 3;
+    }
+
+}
+@media only screen and (min-width: 750px) and (max-width: 1150px){
+    .wavi{
+        top: 60px;
     }
 }

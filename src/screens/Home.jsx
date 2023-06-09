@@ -39,8 +39,8 @@ function Home() {
       <div><Title /></div>
       <div><Carousel /></div>
       <form className="d-flex search">
-        <input value={search} onChange={searchIt} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <input value={search} onChange={searchIt} className={`form-control me-2" `} type="search" placeholder="Search" aria-label="Search" />
+        <button className={`btn btn-outline-success ${cardcss.srchbtn}`} type="submit">Search</button>
       </form>
       <div className='container'>
         {

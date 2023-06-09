@@ -16,7 +16,7 @@
 
 .cardi{
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
-    min-height: 390px;
+    min-height: 400px;
 }
 
 .carddisplay:hover{
@@ -32,7 +32,7 @@
 }
 
 select{
-    background-color: #9bdcf3;
+    background-color: rgba(255, 215, 0, 0.8);
     border-radius: 5px;  
     color: #000000;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
@@ -40,5 +40,21 @@ select{
 }
 
 .addcart{
+    border: solid;
+    border-radius: 6px;
+    border-width: 2px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: rgba(255, 215, 0, 0.8);
+}
 
+.srchbtn{
+    border-color: #ffd700 !important;
+    color: #ffd700;
+    margin-left: 10px;
+}
+
+.srchbtn:hover{
+    background-color: #ffd700;
+    color: black;
 }

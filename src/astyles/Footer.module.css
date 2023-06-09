@@ -17,12 +17,14 @@
 
 .icon{
     margin: 0px 20px;
+    color: black !important;
 }
 
 .copyright{
     font-size: 20px;
     font-family: 'Sedgwick Ave', cursive;
     display: flex;
+    color: black !important;
     justify-content: center;
     margin-top: 20px;
 }
