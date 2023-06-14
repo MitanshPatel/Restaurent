@@ -8,8 +8,6 @@ import { useCart, useDispatchCart } from './contextReducer';
 function Navbar() {
   let data = useCart();                  //data which is sent to other components
   var len = data.length;
-  let dispatch = useDispatchCart();      //used to dispatch data to other components thru contextRouter
-
 
   const [cartView, setCartView] = useState(false)
   const navigate = useNavigate();
