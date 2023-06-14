@@ -4,6 +4,7 @@
 
 .done{
     display: flex;
+    flex-wrap: wrap !important;
     margin: 40px 100px;
     color: white;
 }
@@ -66,4 +67,64 @@
     position: absolute;
     bottom: 0px;
     z-index: -1;
+}
+
+@media only screen and (min-device-width : 530px) and (max-device-width : 889px){
+    .heading{
+        font-size: 35px;
+    }
+
+    .chckout{
+        font-size: 20px;
+        height: 40px;
+        width: 110px;
+    }
+
+    .price{
+        font-size: 25px;
+    }
+
+    .tabl{
+        font-size: 20px;
+        margin: 0px 20px;
+        border: none;
+    }
+
+    .done{
+        margin: 40px 20px;
+    }
+}
+
+@media only screen and (max-device-width : 529px){
+    .heading{
+        font-size: 45px;
+    }
+
+    .chckout{
+        font-size: 20px;
+        height: 35px;
+        width: 105px;
+    }
+
+    .price{
+        font-size: 25px;
+        margin: 0px;
+    }
+
+    .tabl{
+        font-size: 12px;
+        margin: 0px 20px;
+        padding: 0px;
+        border: none;
+    }
+
+    .done{
+        margin: 40px 20px;
+    }
+
+    .del{
+        font-size: 15px !important;
+        padding: 0px !important;
+        margin: 0px !important; 
+    }
 }

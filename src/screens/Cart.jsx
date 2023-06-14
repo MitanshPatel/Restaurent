@@ -1,5 +1,7 @@
 import React from 'react'
 import css from '../astyles/cart.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash} from "@fortawesome/free-solid-svg-icons";
 import { useCart, useDispatchCart } from '../components/contextReducer';
 
 function Cart() {
@@ -14,20 +16,20 @@ function Cart() {
     }
 
     const handleCheckOut = async () => {
-        let userEmail = localStorage.getItem("userEmail");
-        let response = await fetch("http://localhost:5000/api/auth/orderData", {
+        let userEmail = localStorage.getItem("userEmail");  //to get email that was stored in local storage in login
+        let response = await fetch("http://localhost:5000/api/orderData", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                order_data: data,
+                order_data: data,    //data is of useCart or items in cart
                 email: userEmail,
                 order_date: new Date().toDateString()
             })
         });
         if (response.status === 200) {
-            dispatch({ type: "DROP" })
+            dispatch({ type: "DROP" })  //if check out clicked, drop the dispatch or the cart becomes empty
         }
     }
 
@@ -64,7 +66,7 @@ function Cart() {
                                 <td className='bg-transparent text-white'>{food.qty}</td>
                                 <td className='bg-transparent text-white'>{food.size}</td>
                                 <td className='bg-transparent text-white' colspan='2'>{food.price}</td>
-                                <td className='bg-transparent text-white'><button type="button" className="btn p-0 text-white" onClick={() => { dispatch({ type: "REMOVE", index: index }) }}>Delete</button> </td></tr>
+                                <td className='bg-transparent text-white'><button type="button" className={`btn p-0 text-white ${css.del}`} onClick={() => { dispatch({ type: "REMOVE", index: index }) }}><FontAwesomeIcon icon={faTrash} style={{color: "#f70000",}} /></button> </td></tr>
                         ))}
                     </tbody>
                 </table>

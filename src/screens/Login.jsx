@@ -23,7 +23,8 @@ function Login() {
       alert("Enter valid details")
     }
     else if(json.success){
-      localStorage.setItem("authToken",json.authToken);
+      localStorage.setItem("userEmail", details.email);    //save the email in local storage to use it in checkout
+      localStorage.setItem("authToken",json.authToken);    //to save the cookie in local storage
       navigate("/");
     }
   } 

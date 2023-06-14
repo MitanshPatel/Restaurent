@@ -13,8 +13,9 @@ app.use((req,res,next)=>{           //for connecting 3000 to 5000
 })
 
 app.use(express.json())
-app.use('/api', require("./Routes/createUser"));   //(middleware)using Router, if /api is visited, then it has to go to createUser.
+app.use('/api', require("./Routes/createUser"));   //(middleware)using Router, go to createUser.js
 app.use('/api', require("./Routes/displayData"));
+app.use('/api', require("./Routes/OrderData"));
 
 app.listen(5000, ()=>{
     console.log("Port is running")

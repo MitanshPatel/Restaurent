@@ -1,6 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import Home from './screens/Home';
 import {
   BrowserRouter as Router,
@@ -10,7 +8,6 @@ import {
 import Login from './screens/Login';
 import SignUp from './screens/SignUp'
 import { CartProvider } from './components/contextReducer';
-import Cart from './screens/Cart';
 
 function App() {
   return (

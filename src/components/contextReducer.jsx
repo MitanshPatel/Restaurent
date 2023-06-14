@@ -17,8 +17,12 @@ const reducer = (state, action) => {
                 if(food.id === action.id){
                     arr[index]={...food, qty: parseInt(action.qty) + food.qty, price: action.price + food.price}
                 }
+                return arr
             })
             return arr
+        case "DROP":
+            let emp=[];
+            return emp;
         default:
             console.log("Error in reducer");
     }
