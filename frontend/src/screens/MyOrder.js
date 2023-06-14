@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ocss from '../astyles/order.module.css'
+const burl = process.env.burl;
 
 function MyOrder() {
     const [orderData, setorderData] = useState({})
 
     const fetchMyOrder = async () => {
         console.log(localStorage.getItem('userEmail'))
-        await fetch("http://localhost:5000/api/myOrderData", {
+        await fetch(`${burl}/api/myOrderData`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

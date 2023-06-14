@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import css from '../astyles/login.module.css'
 import {Link, useNavigate} from 'react-router-dom'
+const burl = process.env.burl;
 
 function Login() {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ function Login() {
 
   const handleSubmit = async(event) =>{
     event.preventDefault();         //will keep the value entered in the forms event after submitting
-    const res = await fetch("http://localhost:5000/api/login",{
+    const res = await fetch(`${burl}/api/login`,{
       method:"POST",
       headers:{
         'Content-Type': 'application/json'

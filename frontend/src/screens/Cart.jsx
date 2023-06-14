@@ -3,6 +3,7 @@ import css from '../astyles/cart.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash} from "@fortawesome/free-solid-svg-icons";
 import { useCart, useDispatchCart } from '../components/contextReducer';
+const burl = process.env.burl;
 
 function Cart() {
     let data = useCart();
@@ -17,7 +18,7 @@ function Cart() {
 
     const handleCheckOut = async () => {
         let userEmail = localStorage.getItem("userEmail");  //to get email that was stored in local storage in login
-        let response = await fetch("http://localhost:5000/api/orderData", {
+        let response = await fetch(`${burl}/api/orderData`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
