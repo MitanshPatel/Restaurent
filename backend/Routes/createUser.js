@@ -4,7 +4,6 @@ const User = require('../models/User')          //importing mongo Schema of user
 const { body, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");          //for cookies
-const jwtSecret = "thiscanbearandonstringcuz12#2"   //to create auth token
 
 // For sign up
 router.post("/createuser",
@@ -54,7 +53,7 @@ async (req, res) => {
                         id: user.id
                     }
                 }
-                const authToken = jwt.sign(data, jwtSecret);
+                const authToken = jwt.sign(data, process.env.jwtSecret);
                 return res.json({ success: true, authToken:authToken })
             }
             else{
