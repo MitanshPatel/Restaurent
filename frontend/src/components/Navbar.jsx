@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import navcss from '../astyles/Navbar.module.css'
 import Model from '../Model'
 import Cart from '../screens/Cart'
-import { useCart, useDispatchCart } from './contextReducer';
+import { useCart } from './contextReducer';
 
 function Navbar() {
   let data = useCart();                  //data which is sent to other components
