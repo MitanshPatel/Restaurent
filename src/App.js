@@ -8,6 +8,7 @@ import {
 import Login from './screens/Login';
 import SignUp from './screens/SignUp'
 import { CartProvider } from './components/contextReducer';
+import MyOrder from './screens/MyOrder';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route exact path="/" element={<Home />} />      {/*element to render is Home when path is "/" */}
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/createuser" element={<SignUp />} />
+            <Route exact path="/myorder" element={<MyOrder />} />
           </Routes>
         </div>
       </Router>
