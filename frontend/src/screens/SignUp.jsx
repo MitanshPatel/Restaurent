@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import css from '../astyles/signup.module.css'
 import { Link, useNavigate } from 'react-router-dom'
-const burl = process.env.burl;
 
 function SignUp() {
   const navigate=useNavigate();
@@ -9,7 +8,7 @@ function SignUp() {
 
   const handleSubmit = async(event) =>{
     event.preventDefault();         //will keep the value entered in the forms event after submitting
-    const res = await fetch(`${burl}/api/createuser`,{
+    const res = await fetch(`http://localhost:5000/api/createuser`,{
       method:"POST",
       headers:{
         'Content-Type': 'application/json'
