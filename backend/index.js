@@ -17,7 +17,7 @@ const furl = process.env.furl
 // })
 
 const corsOptions = {
-    origin: `${furl}` // frontend URI (ReactJS)
+    origin: "http:localhost:3000" // frontend URI (ReactJS)
 }
 app.use(cors(corsOptions));
 
