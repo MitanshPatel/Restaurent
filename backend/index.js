@@ -17,7 +17,7 @@ const furl = process.env.furl
 // })
 
 const corsOptions = {
-    origin: "http:localhost:3000" // frontend URI (ReactJS)
+    origin: "https://magique.onrender.com" // frontend URI (ReactJS)
 }
 app.use(cors(corsOptions));
 
