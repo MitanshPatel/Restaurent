@@ -8,7 +8,7 @@ function Login() {
 
   const handleSubmit = async(event) =>{
     event.preventDefault();         //will keep the value entered in the forms event after submitting
-    const res = await fetch(`http://localhost:5000/api/login`,{
+    const res = await fetch("https://lacuisinemagique.onrender.com/api/login",{
       method:"POST",
       headers:{
         'Content-Type': 'application/json'

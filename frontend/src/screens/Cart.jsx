@@ -17,7 +17,7 @@ function Cart() {
 
     const handleCheckOut = async () => {
         let userEmail = localStorage.getItem("userEmail");  //to get email that was stored in local storage in login
-        let response = await fetch(`http://localhost:5000/api/orderData`, {
+        let response = await fetch("https://lacuisinemagique.onrender.com/api/orderdata", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
