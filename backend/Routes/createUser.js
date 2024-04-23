@@ -54,6 +54,7 @@ async (req, res) => {
                     }
                 }
                 const authToken = jwt.sign(data, process.env.jwtSecret);
+                console.log(authToken);
                 return res.json({ success: true, authToken:authToken })
             }
             else{

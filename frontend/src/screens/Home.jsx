@@ -13,7 +13,7 @@ function Home() {
   const [item, setItem] = useState([])
 
   const loadData = async () => {
-    let res = await fetch("https://lacuisinemagique.onrender.com/api/food", {
+    let res = await fetch("http://localhost:5000/api/food", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

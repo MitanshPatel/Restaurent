@@ -8,7 +8,7 @@ function MyOrder() {
 
     const fetchMyOrder = async () => {
         console.log(localStorage.getItem('userEmail'))
-        await fetch("https://lacuisinemagique.onrender.com/api/myorderdata", {
+        await fetch("http://localhost:5000/api/myorderdata", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
